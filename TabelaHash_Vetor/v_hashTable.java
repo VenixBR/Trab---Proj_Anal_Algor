@@ -39,15 +39,6 @@ public class v_hashTable {
         }
     }
 
-
-
-
-
-
-
-
-    
-
     public Veiculo remove(int chave){
         int sondagem = 0;
         int hash = 0;
