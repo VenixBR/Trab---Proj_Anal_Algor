@@ -11,10 +11,6 @@ public class v_hashTable {
         return chave%this.vetor.length;
     }
 
-
-
-
-
     private Veiculo[] resize(){
         Veiculo novo[] = new Veiculo[2*this.vetor.length];
         for(int i=0; i<this.vetor.length;i++){
@@ -28,10 +24,9 @@ public class v_hashTable {
         int hash;
         if(tamanho/vetor.length >= 0.75){
             Veiculo[] novo;
-            vetor = vetor.resize();          //<--------------------------ERRO AQUI
+            vetor = resize();
         }
         tamanho++;
-
 
         while(sondagem < vetor.length){
             hash = (hash(chave) + sondagem)%vetor.length;
