@@ -1,9 +1,9 @@
-public class v_hashTable {
+public class V_hashTable {
 
     private Veiculo[] vetor;
     private int tamanho;
     
-    public v_hashTable(){
+    public V_hashTable(){
         this.vetor = new Veiculo[100];
         this.tamanho = 0;
     }
