@@ -4,8 +4,6 @@ Trabalho de Projeto e Análise de Algoritmos
 
 2023
 
-\n
-
 Claudenir Filho
 
 Frederico Sicorra
