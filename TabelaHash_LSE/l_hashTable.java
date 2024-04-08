@@ -7,7 +7,7 @@ public class l_hashTable {
         this.vetorLista = new LDE[x];
     }
 
-    public int hash(int chave) {
+    private int hash(int chave) {
 
         int pos = (int) ((chave * 0.635789) % 1 * vetorLista.length);
 
