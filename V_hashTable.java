@@ -11,6 +11,8 @@ public class V_hashTable {
         this.sondagem = 0;
     }
 
+//---------- MÉTODOS OBRIGATÓRIOS ------------------------------------------
+
     //Função Hash com sondagem
     private int hash(int chave){
         return (chave%this.vetor.length + this.sondagem)%this.vetor.length; 
@@ -27,6 +29,7 @@ public class V_hashTable {
     }
     
     //Parte do método Resize que insere os elementos na nova tabela com o novo hash
+    //Rehash é opcional, teoricamente faz parte do resize
     private void rehash(int chave, Veiculo valor, Veiculo[] vetor){
         int hash;
         this.sondagem = 0;
@@ -86,21 +89,6 @@ public class V_hashTable {
         return veiculo;
     } 
 
-    //Faz uma busca e retorna true caso o elemento for encontrado
-    public boolean contains(int chave){
-        int hash = 0;
-        this.sondagem = 0;
-        while(this.sondagem < this.vetor.length){
-            hash = hash(chave);
-
-            if(this.vetor[hash] != null && vetor[hash].getChassi() == chave){   
-                return true;
-            }
-            this.sondagem++;
-        }
-        return false;
-    }
-
     //Retorna um elemento da tabela a partir da chave
     public Veiculo get(int chave){
         int hash = 0;
@@ -115,6 +103,23 @@ public class V_hashTable {
             this.sondagem++;
         }
         return null;
+    }
+
+//--------------------------------------------------------------------------
+
+    //Faz uma busca e retorna true caso o elemento for encontrado
+    public boolean contains(int chave){
+        int hash = 0;
+        this.sondagem = 0;
+        while(this.sondagem < this.vetor.length){
+            hash = hash(chave);
+
+            if(this.vetor[hash] != null && vetor[hash].getChassi() == chave){   
+                return true;
+            }
+            this.sondagem++;
+        }
+        return false;
     }
 
     //Retorna um elemento da tabela a partir do índice do vetor
