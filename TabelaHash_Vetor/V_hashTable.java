@@ -11,31 +11,31 @@ public class V_hashTable {
         this.sondagem = 0;
     }
 
-    //Função Hash
-    private int hash(int chave, Veiculo[] vector){
-        return (chave%vector.length + this.sondagem)%vector.length; 
+    //Função Hash com sondagem
+    private int hash(int chave){
+        return (chave%this.vetor.length + this.sondagem)%this.vetor.length; 
     }
 
     //Resize aumenta o tamanho da tabela em 2x quando atinge 75% da capacidade
-    private Veiculo[] resize(){
+    private void resize(){
         Veiculo novo[] = new Veiculo[2*this.vetor.length];
         for(int i=0; i<this.vetor.length;i++){
             if(this.vetor[i]!=null)
                 rehash(this.vetor[i].getChassi(), this.vetor[i], novo); 
         }
-        return novo;
+        this.vetor = novo;
     }
     
     //Parte do método Resize que insere os elementos na nova tabela com o novo hash
-    private void rehash(int chave, Veiculo valor, Veiculo[] vector){
-        this.sondagem = 0;
+    private void rehash(int chave, Veiculo valor, Veiculo[] vetor){
         int hash;
+        this.sondagem = 0;
 
-        while(sondagem < vector.length){
-            hash = hash(chave, vector);
+        while(sondagem < vetor.length){
+            hash = (chave%vetor.length + this.sondagem)%vetor.length;
 
-            if(vector[hash] == null){
-                vector[hash] = valor;
+            if(vetor[hash] == null){
+                vetor[hash] = valor;
                 return;
             }
             this.sondagem++;
@@ -44,15 +44,15 @@ public class V_hashTable {
 
     //Insere ou sobrescreve um elemento na tabela e chama o resize se necessário
     public void put(int chave, Veiculo valor){
-        this.sondagem = 0;
         int hash;
 
         if((double)tamanho/this.vetor.length >= 0.75){
-            this.vetor = resize();
+            resize();
         }
 
+        this.sondagem = 0;
         while(sondagem < this.vetor.length){
-            hash = hash(chave, this.vetor);
+            hash = hash(chave);
 
             if(this.vetor[hash] == null){
                 this.vetor[hash] = valor;
@@ -69,12 +69,12 @@ public class V_hashTable {
 
     //Remove um elemento da tabela se ele existir
     public Veiculo remove(int chave){
-        this.sondagem = 0;
         int hash = 0;
+        this.sondagem = 0;
         Veiculo veiculo = this.vetor[hash];
 
-        while(sondagem < vetor.length){
-            hash = hash(chave, this.vetor);
+        while(this.sondagem < vetor.length){
+            hash = hash(chave);
 
             if(vetor[hash].getChassi() == chave){
                 this.vetor[hash] = null;
@@ -88,10 +88,10 @@ public class V_hashTable {
 
     //Faz uma busca e retorna true caso o elemento for encontrado
     public boolean contains(int chave){
-        this.sondagem = 0;
         int hash = 0;
+        this.sondagem = 0;
         while(this.sondagem < this.vetor.length){
-            hash = hash(chave, this.vetor);
+            hash = hash(chave);
 
             if(this.vetor[hash] != null && vetor[hash].getChassi() == chave){   
                 return true;
@@ -103,11 +103,11 @@ public class V_hashTable {
 
     //Retorna um elemento da tabela a partir da chave
     public Veiculo get(int chave){
-        this.sondagem = 0;
         int hash = 0;
+        this.sondagem = 0;
 
-        while(sondagem < this.vetor.length){
-            hash = hash(chave, this.vetor);
+        while(this.sondagem < this.vetor.length){
+            hash = hash(chave);
 
             if(this.vetor[hash].getChassi() == chave){
                 return this.vetor[hash];
@@ -136,6 +136,7 @@ public class V_hashTable {
 
     //Retorna a hash de um elemento a partir da chave
     public int getHash(int chave){
-        return hash(chave, this.vetor);
+        this.sondagem = 0;
+        return hash(chave);
     }
 }
