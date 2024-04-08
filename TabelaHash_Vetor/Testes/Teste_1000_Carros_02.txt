@@ -2,6 +2,15 @@ TESTE 01
 
 Tamanho:1600   Elementos:1000
 
+
+RELATÓRIO: Foi observado que o número de elementos mais o
+número de espaços vazios (1000 + 604) não equivalia ao ta-
+manho do vetor. Deduziu-se que estava repitindo chassis e
+sobrescrevendo e o algoritmos contava como se fosse um novo
+elemento.
+
+
+
 Vetor[0]
 Vetor[1]
 Vetor[2]  Hash: 2  Veiculo chassi: 202054402 marca: Renault

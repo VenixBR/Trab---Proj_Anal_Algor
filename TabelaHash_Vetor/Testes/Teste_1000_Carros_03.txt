@@ -2,6 +2,20 @@ TESTE 01
 
 Tamanho:1600   Elementos:994
 
+
+RELATÓRIO: Foi encontrado o erro no código que causava a não
+equivalência entre o número de elementos e os espaços vazios.
+na função put havia 
+
+if(this.vetor[hash] == null || this.vetor[hash].getChassi() == chave)
+
+de modo que se a chave fosse igual ao chassi do elemento do 
+vetor ele iria sobrescrever, porém iria incrementar 1 no número 
+de elementos. As duas condições do if foram separadas em dois
+ifs e somente quando for null irá incrementar.
+
+
+
 Vetor[0]
 Vetor[1]
 Vetor[2]
