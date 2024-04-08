@@ -40,7 +40,7 @@ public class V_hashTable {
         }
     }
 
-    //Insere ou sobre escreve um elemento na tabela e chama o resize se necessário
+    //Insere ou sobrescreve um elemento na tabela e chama o resize se necessário
     public void put(int chave, Veiculo valor){
         int sondagem = 0;
         int hash;
