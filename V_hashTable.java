@@ -90,7 +90,7 @@ public class V_hashTable {
     } 
 
     //Retorna um elemento da tabela a partir da chave
-    public Veiculo get(int chave){
+    public Veiculo getVeiculo(int chave){
         int hash = 0;
         this.sondagem = 0;
 
