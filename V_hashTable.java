@@ -107,6 +107,16 @@ public class V_hashTable {
 
 //--------------------------------------------------------------------------
 
+    //Busca quantos elementos são da Ford com uma busca
+    public int buscaFord(){
+        int numFord = 0;
+        for(int i=0; i<this.vetor.length; i++){
+            if(this.vetor[i]!= null && this.vetor[i].getMarca() == "Ford")
+                numFord++;
+        }
+        return numFord;
+    }
+
     //Faz uma busca e retorna true caso o elemento for encontrado
     public boolean contains(int chave){
         int hash = 0;
