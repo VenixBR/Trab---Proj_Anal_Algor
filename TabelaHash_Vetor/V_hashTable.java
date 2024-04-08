@@ -3,15 +3,17 @@ public class V_hashTable {
 
     private Veiculo[] vetor;
     private int tamanho;         //número de elementos na tabela
+    private int sondagem;
     
     public V_hashTable(){
         this.vetor = new Veiculo[100];
         this.tamanho = 0;
+        this.sondagem = 0;
     }
 
     //Função Hash
-    private int hash(int chave, int sond, Veiculo[] vector){
-        return (chave%vector.length + sond)%vector.length; 
+    private int hash(int chave, Veiculo[] vector){
+        return (chave%vector.length + this.sondagem)%vector.length; 
     }
 
     //Resize aumenta o tamanho da tabela em 2x quando atinge 75% da capacidade
@@ -26,23 +28,23 @@ public class V_hashTable {
     
     //Parte do método Resize que insere os elementos na nova tabela com o novo hash
     private void rehash(int chave, Veiculo valor, Veiculo[] vector){
-        int sondagem = 0;
+        this.sondagem = 0;
         int hash;
 
         while(sondagem < vector.length){
-            hash = hash(chave,sondagem, vector);
+            hash = hash(chave, vector);
 
             if(vector[hash] == null){
                 vector[hash] = valor;
                 return;
             }
-            sondagem++;
+            this.sondagem++;
         }
     }
 
     //Insere ou sobrescreve um elemento na tabela e chama o resize se necessário
     public void put(int chave, Veiculo valor){
-        int sondagem = 0;
+        this.sondagem = 0;
         int hash;
 
         if((double)tamanho/this.vetor.length >= 0.75){
@@ -50,67 +52,67 @@ public class V_hashTable {
         }
 
         while(sondagem < this.vetor.length){
-            hash = hash(chave,sondagem, this.vetor);
+            hash = hash(chave, this.vetor);
 
             if(this.vetor[hash] == null){
                 this.vetor[hash] = valor;
-                tamanho++;
+                this.tamanho++;
                 return;
             }
             else if(this.vetor[hash].getChassi() == chave){
                 this.vetor[hash] = valor;
                 return;
             }
-            sondagem++;
+            this.sondagem++;
         }
     }
 
     //Remove um elemento da tabela se ele existir
     public Veiculo remove(int chave){
-        int sondagem = 0;
+        this.sondagem = 0;
         int hash = 0;
         Veiculo veiculo = this.vetor[hash];
 
         while(sondagem < vetor.length){
-            hash = hash(chave,sondagem, this.vetor);
+            hash = hash(chave, this.vetor);
 
             if(vetor[hash].getChassi() == chave){
                 this.vetor[hash] = null;
-                tamanho--;
+                this.tamanho--;
                 break;
             }
-            sondagem++;
+            this.sondagem++;
         }
         return veiculo;
     } 
 
     //Faz uma busca e retorna true caso o elemento for encontrado
     public boolean contains(int chave){
-        int sondagem = 0;
+        this.sondagem = 0;
         int hash = 0;
-        while(sondagem < this.vetor.length){
-            hash = hash(chave,sondagem, this.vetor);
+        while(this.sondagem < this.vetor.length){
+            hash = hash(chave, this.vetor);
 
             if(this.vetor[hash] != null && vetor[hash].getChassi() == chave){   
                 return true;
             }
-            sondagem++;
+            this.sondagem++;
         }
         return false;
     }
 
     //Retorna um elemento da tabela a partir da chave
     public Veiculo get(int chave){
-        int sondagem = 0;
+        this.sondagem = 0;
         int hash = 0;
 
         while(sondagem < this.vetor.length){
-            hash = hash(chave,sondagem, this.vetor);
+            hash = hash(chave, this.vetor);
 
             if(this.vetor[hash].getChassi() == chave){
                 return this.vetor[hash];
             }
-            sondagem++;
+            this.sondagem++;
         }
         return null;
     }
@@ -129,11 +131,11 @@ public class V_hashTable {
 
     //Retorna quantos elementos há no vetor
     public int getTamanho(){
-        return tamanho;
+        return this.tamanho;
     }
 
     //Retorna a hash de um elemento a partir da chave
     public int getHash(int chave){
-        return hash(chave, 0, this.vetor);
+        return hash(chave, this.vetor);
     }
 }
