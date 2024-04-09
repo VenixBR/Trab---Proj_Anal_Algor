@@ -17,9 +17,13 @@ public Noh getProx() {
     return prox;
  }
 
-    public void setProx(Noh n) {
-        this.prox = n;
-    }
+public void setProx(Noh n) {
+    this.prox = n;
+}
+
+public void setInfo(Veiculo novoVeiculo) {
+    this.info = novoVeiculo;
+}
 
 public Noh getAnt() { 
     return ant;

@@ -1,5 +1,5 @@
 public class l_hashTable {
-
+    
     public LDE[] vetorLista;
     private int tamanho;
 
@@ -9,7 +9,7 @@ public class l_hashTable {
 
     private int hash(int chave) {
 
-        int pos = (int) ((chave * 0.635789) % 1 * vetorLista.length);
+        int pos = (int) ((chave * 0.635789) * this.vetorLista.length);
 
         return pos;
     }
@@ -29,6 +29,7 @@ public class l_hashTable {
         } else {
             for (Noh n = veiculos_lista.getInicio(); n != null; n = n.getProx()) {
                 if (n.getInfo().getChassi() == chave) {
+                    n.setInfo(carro);
                     return;
                 }
             }
@@ -55,7 +56,7 @@ public class l_hashTable {
     }
 
     private LDE[] rehash(int chave, Veiculo carro, LDE[] vetor) {
-        int pos = (int) ((chave * 0.635789) % 1 * vetor.length);
+        int pos = (int) ((chave * 0.635789) * vetor.length);
 
         if (vetor[pos] == null) {
             vetor[pos] = new LDE();
@@ -91,7 +92,7 @@ public class l_hashTable {
 
     }
 
-    public void remove(int chave) {
+    public void removeChassi(int chave) {
         int hash = hash(chave);
         LDE veiculos_lista = this.vetorLista[hash];
         if (veiculos_lista != null) {
@@ -120,24 +121,21 @@ public class l_hashTable {
             }
         }
     }
-    public Noh busca(int chave){
-        int hash = hash(chave);
-        LDE veiculos_lista = this.vetorLista[hash];
-        if (veiculos_lista != null) {
-            Noh p = veiculos_lista.getInicio();
-            while (p != null) { //busca
-                p = p.getProx();
-            
-                if (p.getInfo().getChassi() == chave){
-                    System.out.println("Veiculo com chassi " + p.getInfo().getChassi() + "encontrado");
-                    return p;
+
+    public int buscaFord(){
+        LDE[] veiculos_lista = this.vetorLista;
+        int f = 0;
+        for(int i = 0; i<veiculos_lista.length; i++){
+            if (veiculos_lista[i] != null) {
+                Noh p = veiculos_lista[i].getInicio();
+                while (p != null) { //busca
+                    if (p.getInfo().isMarcaFord()){
+                        f++;
+                    }
+                    p = p.getProx();
                 }
             }
-            
-        }
-        else{
-            System.out.println("Veiculo nao encontrado");
-        }
-        return null;
+            }
+            return f;
         }
 }
