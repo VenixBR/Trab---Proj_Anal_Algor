@@ -70,23 +70,21 @@ public class V_hashTable {
         }
     }
 
-    //Remove um elemento da tabela se ele existir
-    public Veiculo remove(int chave){
+    //Remove um elemento da tabela a partir da chave, se ele existir
+    public void remove(int chave){
         int hash = 0;
         this.sondagem = 0;
-        Veiculo veiculo = this.vetor[hash];
 
-        while(this.sondagem < vetor.length){
+        while(this.sondagem < this.vetor.length){
             hash = hash(chave);
 
-            if(vetor[hash].getChassi() == chave){
+            if(this.vetor[hash] != null && this.vetor[hash].getChassi() == chave){
                 this.vetor[hash] = null;
                 this.tamanho--;
                 break;
             }
             this.sondagem++;
         }
-        return veiculo;
     } 
 
     //Retorna um elemento da tabela a partir da chave
@@ -107,7 +105,7 @@ public class V_hashTable {
 
 //--------------------------------------------------------------------------
 
-    //Busca quantos elementos são da Ford com uma busca
+    //Conta quantos elementos são da Ford com uma busca
     public int buscaFord(){
         int numFord = 0;
         for(int i=0; i<this.vetor.length; i++){
@@ -115,6 +113,15 @@ public class V_hashTable {
                 numFord++;
         }
         return numFord;
+    }
+
+    //Remove todos os elementos com o chassi <=202050000
+    public void removeChassi(){
+        for(int i=0; i<this.vetor.length; i++){
+            if(this.vetor[i]!= null && this.vetor[i].getChassi() <= 202050000){
+                remove(this.vetor[i].getChassi());
+            }     
+        }
     }
 
     //Faz uma busca e retorna true caso o elemento for encontrado
@@ -145,7 +152,7 @@ public class V_hashTable {
     }
 
     //Retorna quantos elementos há no vetor
-    public int getTamanho(){
+    public int getBusy(){
         return this.tamanho;
     }
 
