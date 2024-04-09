@@ -20,12 +20,12 @@ public class main{
 
 
         //Arquivo para salvar todos os elementos da lista
-        FileWriter table = new FileWriter("c:\\Trabalho\\Tabelas\\tabela.txt");
+        FileWriter table = new FileWriter("d:\\Trabalho\\Tabelas\\tabela.txt");
         PrintWriter gravarTable = new PrintWriter(table);    
 
         //Arquivo para salvar os tempos de execução
-        FileWriter tempos = new FileWriter("c:\\Trabalho\\Tempos\\tabela.txt");
-        PrintWriter gravarTempos = new PrintWriter(table);
+        FileWriter tempos = new FileWriter("d:\\Trabalho\\Tempos\\tempos.txt");
+        PrintWriter gravarTempos = new PrintWriter(tempos);
 
         //Variáveis para salvar os tempos
         long time_ini = 0;
@@ -42,7 +42,7 @@ public class main{
         for(int i=0; i<90;i++){
             Veiculo x = new Veiculo();
             tabela.put(x.getChassi(),x);
-            System.out.println("Tamanho:" + tabela.getSize() + "   Elementos:" + tabela.getTamanho()); 
+            System.out.println("Tamanho:" + tabela.getSize() + "   Elementos:" + tabela.getBusy()); 
         }
 
         //Salva o tempo final do teste
@@ -52,6 +52,9 @@ public class main{
         m1 = time_fim - time_ini;
         //System.out.println(m1);
 
+
+        //System.out.println("Carros Ford: " + tabela.buscaFord());
+
         //Para fazer os outros testes é só copiar esse for e alterar o i
 
 
@@ -59,7 +62,7 @@ public class main{
 
          
         gravarTable.println("TESTE 01\n");
-        gravarTable.println("Tamanho:" + tabela.getSize() + "   Elementos:" + tabela.getTamanho()+"\n");
+        gravarTable.println("Tamanho:" + tabela.getSize() + "   Elementos:" + tabela.getBusy()+"\n");
 
         Veiculo egg;
         int vazio = 0;
@@ -77,6 +80,9 @@ public class main{
         
 
         //---------------------------------------------------------------------------------------------------
+
+        tabela.removeChassi();
+        System.out.println("terminou");
 
 
         gravarTempos.printf("Tempo para inserir 10 carros:  " + m1 + " ns");
