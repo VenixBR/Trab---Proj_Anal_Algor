@@ -1,6 +1,7 @@
 public class LDE implements Lista {// TAD Lista duplamente encadeada
     private Noh inicio;
     private Noh fim;
+    public int tamanho = 0;
 
     public LDE() {
         this.inicio = null;
@@ -19,6 +20,7 @@ public class LDE implements Lista {// TAD Lista duplamente encadeada
             inicio.setAnt(novo);
             inicio = novo;
         }
+        tamanho++;
     }
 
     public void insereFim(Veiculo info) {
@@ -31,28 +33,32 @@ public class LDE implements Lista {// TAD Lista duplamente encadeada
             fim.setProx(novo);
             fim = novo;
         }
-
+        tamanho++;
     }
 
-    public boolean remove(Veiculo info) {
+    public boolean remove(Veiculo i) {
         Noh p = inicio;
-        while (p != null && p.getInfo() != info) // busca
+        while (p != null && p.getInfo() != i) // busca
             p = p.getProx();
         if (p == null) // não achou, então não faz nada e retorna false
             return false;
         if (p == inicio) { // info estah no inicio
+            System.out.println("Veiculo com chassi " + p.getInfo().getChassi() + " encontrado e removido");
             inicio = p.getProx();
             if (inicio != null)
                 inicio.setAnt(null);
             else
                 fim = null;
         } else if (p.getProx() == null) { // info estah no fim
+            System.out.println("Veiculo com chassi " + p.getInfo().getChassi() + " encontrado e removido");
             p.getAnt().setProx(null);
             fim = p.getAnt();
         } else { // info estah no meio
+            System.out.println("Veiculo com chassi " + p.getInfo().getChassi() + " encontrado e removido");
             p.getAnt().setProx(p.getProx());
             p.getProx().setAnt(p.getAnt());
         }
+        tamanho--;
         return true;
     }
     public Noh getInicio() {
@@ -68,6 +74,9 @@ public class LDE implements Lista {// TAD Lista duplamente encadeada
     }
     public void setFim(Noh n){
         this.fim = n;
+    }
+    public int getTamanho(){
+        return tamanho;
     }
 
  
