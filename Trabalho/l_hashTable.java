@@ -21,7 +21,6 @@ public class l_hashTable {
         }
 
         int hash = hash(chave);
-        System.out.println(chave);
         LDE veiculos_lista = this.vetorLista[hash];
         if (veiculos_lista == null) {
             veiculos_lista = new LDE();
@@ -92,20 +91,17 @@ public class l_hashTable {
     }
 
     public void removeChassi() {
-        int removidos = 0;
         for(int i = 0; i<vetorLista.length; i++){
             if (vetorLista[i] != null) {
                 Noh p = vetorLista[i].getInicio();
                     while (p != null) {
                         if(p.getInfo().getChassi() <= 202050000) //busca
                         if(vetorLista[i].remove(p.getInfo())){
-                            removidos++;
                         }
                         p = p.getProx();
                     }
                 }
             }
-            System.out.println(removidos);
         
     }
 

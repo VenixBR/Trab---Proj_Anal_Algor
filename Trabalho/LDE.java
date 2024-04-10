@@ -43,18 +43,15 @@ public class LDE implements Lista {// TAD Lista duplamente encadeada
         if (p == null) // não achou, então não faz nada e retorna false
             return false;
         if (p == inicio) { // info estah no inicio
-            System.out.println("Veiculo com chassi " + p.getInfo().getChassi() + " encontrado e removido");
             inicio = p.getProx();
             if (inicio != null)
                 inicio.setAnt(null);
             else
                 fim = null;
         } else if (p.getProx() == null) { // info estah no fim
-            System.out.println("Veiculo com chassi " + p.getInfo().getChassi() + " encontrado e removido");
             p.getAnt().setProx(null);
             fim = p.getAnt();
         } else { // info estah no meio
-            System.out.println("Veiculo com chassi " + p.getInfo().getChassi() + " encontrado e removido");
             p.getAnt().setProx(p.getProx());
             p.getProx().setAnt(p.getAnt());
         }
