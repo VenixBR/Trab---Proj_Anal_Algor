@@ -92,7 +92,7 @@ public class l_hashTable {
 
     }
 
-    public void removeChassi(int chave) {
+    public void remove(int chave) {
         int hash = hash(chave);
         LDE veiculos_lista = this.vetorLista[hash];
         if (veiculos_lista != null) {
