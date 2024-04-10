@@ -1,4 +1,4 @@
-# Trabalho para a Discplina de Projeto e Análise de Algoritmos
+# Trabalho para a Discplina de Projeto e Análise de Algoritmos (UFSM00276)
 
 UFSM - Universidade Federal de Santa Maria - 2024.1
 
