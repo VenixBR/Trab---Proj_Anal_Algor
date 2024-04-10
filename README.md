@@ -1,4 +1,4 @@
-#Trabalho para a Discplina de Projeto e Análise de Algoritmos
+# Trabalho para a Discplina de Projeto e Análise de Algoritmos
 
 UFSM - Universidade Federal de Santa Maria
 
