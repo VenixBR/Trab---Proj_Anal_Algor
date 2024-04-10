@@ -5,7 +5,7 @@ UFSM - Universidade Federal de Santa Maria
 2024
 
 Integrantes: 
--Claudenir Filho
--Frederico Sicorra
--Pedro Augusto Pötter
--Vinícius Schultz
+- Claudenir Filho
+- Frederico Sicorra
+- Pedro Augusto Pötter
+- Vinícius Schultz
