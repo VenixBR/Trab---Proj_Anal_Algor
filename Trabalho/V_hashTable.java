@@ -1,4 +1,3 @@
-<<<<<<< HEAD:TabelaHash_LSE/V_hashTable.java
 public class V_hashTable {
 
     private Veiculo[] vetor;
