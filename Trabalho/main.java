@@ -20,51 +20,92 @@ public class main{
 
 
         //Arquivo para salvar todos os elementos da lista
-        FileWriter table = new FileWriter("d:\\Trabalho\\Tabelas\\tabela.txt");
+        FileWriter table = new FileWriter("c:\\Trabalho\\Tabelas\\tabela.txt");
         PrintWriter gravarTable = new PrintWriter(table);    
 
+        //Arquivo para salvar todos os elementos da lista após a remoção
+        FileWriter table_m = new FileWriter("c:\\Trabalho\\Tabelas\\tabela--.txt");
+        PrintWriter gravarTable_m = new PrintWriter(table_m);    
+
         //Arquivo para salvar os tempos de execução
-        FileWriter tempos = new FileWriter("d:\\Trabalho\\Tempos\\tempos.txt");
+        FileWriter tempos = new FileWriter("c:\\Trabalho\\Tempos\\tempos.txt");
         PrintWriter gravarTempos = new PrintWriter(tempos);
 
         //Variáveis para salvar os tempos
         long time_ini = 0;
         long time_fim = 0;
-        long m1;
+        long t10, t100, t1k,t100k, t1mi, tp, tford, tr;
 
         //Criação da tabela
         V_hashTable tabela = new V_hashTable();
       
-        //Atribuição do tempo de início dos testes
+        //INSERÇÃO DE 10
         time_ini = System.nanoTime();
-
-        //Adiciona i elementos na tabela
-        for(int i=0; i<90;i++){
+        for(int i=0;i<10;i++){
             Veiculo x = new Veiculo();
             tabela.put(x.getChassi(),x);
-            System.out.println("Tamanho:" + tabela.getSize() + "   Elementos:" + tabela.getBusy()); 
         }
-
-        //Salva o tempo final do teste
         time_fim = System.nanoTime();
+        t10 = time_fim - time_ini;
 
-        //Calcula o tempo gasto
-        m1 = time_fim - time_ini;
-        //System.out.println(m1);
+        //INSERÇÃO DE 100
+        for(int i=10;i<100;i++){
+            Veiculo x = new Veiculo();
+            tabela.put(x.getChassi(),x);
+        }
+        time_fim = System.nanoTime();
+        t100 = time_fim - time_ini;
+        
+        //INSERÇÃO DE 1.000
+        for(int i=100;i<1000;i++){
+            Veiculo x = new Veiculo();
+            tabela.put(x.getChassi(),x);
+        }
+        time_fim = System.nanoTime();
+        t1k = time_fim - time_ini;
+
+        //INSERÇÃO DE 100.000
+        for(int i=1000;i<100000;i++){
+            Veiculo x = new Veiculo();
+            tabela.put(x.getChassi(),x);
+        }
+        time_fim = System.nanoTime();
+        t100k = time_fim - time_ini;
+
+        //INSERÇÃO DE 1.000.000
+        for(int i=100000;i<1000000;i++){
+            Veiculo x = new Veiculo();
+            tabela.put(x.getChassi(),x);
+        }
+        time_fim = System.nanoTime();
+        t1mi = time_fim - time_ini;
 
 
-        //System.out.println("Carros Ford: " + tabela.buscaFord());
+        //IMPRESSÃO DE TODOS OS ELEMENTOS
+        time_ini = System.nanoTime();
+        Veiculo egg;
+        for(int i=0; i<tabela.getSize();i++){
+            egg = tabela.getVetor(i);
+            if(egg != null)
+                System.out.println(egg);
+        }
+        time_fim = System.nanoTime();
+        tp = time_fim - time_ini;
 
-        //Para fazer os outros testes é só copiar esse for e alterar o i
+        //PRINTAR TODOS OS VEÍCULOS DA FORD
+        time_ini = System.nanoTime();
+        tabela.buscaFord();
+        time_fim = System.nanoTime();
+        tford = time_fim - time_ini;
 
 
-        //------------------------------- PARTE QUE SALVA O ARQUIVO DA TABELA -------------------------------
+
+        //------------------------------------ SALVA O ARQUIVO DA TABELA ------------------------------------
 
          
         gravarTable.println("TESTE 01\n");
         gravarTable.println("Tamanho:" + tabela.getSize() + "   Elementos:" + tabela.getBusy()+"\n");
 
-        Veiculo egg;
         int vazio = 0;
         for(int i=0; i<tabela.getSize();i++){
             egg = tabela.getVetor(i);
@@ -81,15 +122,64 @@ public class main{
 
         //---------------------------------------------------------------------------------------------------
 
+
+        //REMOÇÃO DE VEÍCULOS COM CHASSI <=202050000
+        time_ini = System.nanoTime();
         tabela.removeChassi();
-        System.out.println("terminou");
+        time_fim = System.nanoTime();
+        tr = time_fim - time_ini;
 
 
-        gravarTempos.printf("Tempo para inserir 10 carros:  " + m1 + " ns");
+        //------------------------------ SALVA O ARQUIVO DA TABELA APÓS REMOÇÃO -----------------------------
+
+         
+        gravarTable_m.println("TESTE 01\n");
+        gravarTable_m.println("Tamanho:" + tabela.getSize() + "   Elementos:" + tabela.getBusy()+"\n");
+
+        vazio = 0;
+        for(int i=0; i<tabela.getSize();i++){
+            egg = tabela.getVetor(i);
+            if(egg != null)
+                gravarTable_m.println("Vetor["+i+"]  " + "Hash: " + tabela.getHash(egg.getChassi()) + "  " + egg);
+            else {
+                gravarTable_m.println("Vetor["+i+"]");
+                vazio++;
+            }
+        }
+
+        gravarTable.println("\n\nEspaços Vazios: " + vazio);
+        
+
+        //---------------------------------------------------------------------------------------------------
+
+
+        //----------------------------------- SALVA O ARQUIVO DOS TEMPOS  -----------------------------------
+
+
+        gravarTempos.printf("-------------------------------\n");
+        gravarTempos.printf("VEÍCULOS     | TEMPO (ns)      \n");
+        gravarTempos.printf("-------------------------------\n");
+               gravarTempos.printf("    10       | " + t10 +      "\n");
+               gravarTempos.printf("    100      | " + t100 +     "\n");
+               gravarTempos.printf("   1.000     | " + t1k +      "\n");
+               gravarTempos.printf("  100.000    | " + t100k +    "\n");
+               gravarTempos.printf(" 1.000.000   | " + t1mi +     "\n");
+        gravarTempos.printf("-------------------------------\n\n\n");
+        gravarTempos.printf("TEMPO PARA IMPRESSÃO:      " + tp + "\n");
+        gravarTempos.printf("TEMPO PARA REMOÇÃO:        " + tr + "\n");
+        gravarTempos.printf("TEMPO PARA MOSTRAR FORD:   " + tford + "\n");
+        
+        
+
+
+        //---------------------------------------------------------------------------------------------------
 
         //Fecha os arquivos
         table.close();
         tempos.close();
+        table_m.close();
+
+        System.out.println("terminou");
 
 
         //System.out.println("\n");
