@@ -30,7 +30,7 @@ public class V_hashTable {
     
     //Parte do método Resize que insere os elementos na nova tabela com o novo hash
     //Rehash é opcional, teoricamente faz parte do resize
-    private void rehash(int chave, Veiculo valor, Veiculo[] vetor){
+    private void rehash(int chave, Veiculo carro, Veiculo[] vetor){
         int hash;
         this.sondagem = 0;
 
@@ -38,7 +38,7 @@ public class V_hashTable {
             hash = (chave%vetor.length + this.sondagem)%vetor.length;
 
             if(vetor[hash] == null){
-                vetor[hash] = valor;
+                vetor[hash] = carro;
                 return;
             }
             this.sondagem++;
@@ -46,7 +46,7 @@ public class V_hashTable {
     }
 
     //Insere ou sobrescreve um elemento na tabela e chama o resize se necessário
-    public void put(int chave, Veiculo valor){
+    public void put(int chave, Veiculo carro){
         int hash;
 
         if((double)tamanho/this.vetor.length >= 0.75){
@@ -58,12 +58,12 @@ public class V_hashTable {
             hash = hash(chave);
 
             if(this.vetor[hash] == null){
-                this.vetor[hash] = valor;
+                this.vetor[hash] = carro;
                 this.tamanho++;
                 return;
             }
             else if(this.vetor[hash].getChassi() == chave){
-                this.vetor[hash] = valor;
+                this.vetor[hash] = carro;
                 return;
             }
             this.sondagem++;
