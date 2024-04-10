@@ -2,6 +2,8 @@
 
 UFSM - Universidade Federal de Santa Maria - 2024.1
 
+Prof. Gabriel Machado Lunardi
+
 Integrantes: 
 - Claudenir Filho
 - Frederico Sicorra
