@@ -1,5 +1,5 @@
 public class l_hashTable {
-    
+
     public LDE[] vetorLista;
     private int tamanho;
 
@@ -9,7 +9,7 @@ public class l_hashTable {
 
     private int hash(int chave) {
 
-        int pos = (int) ((chave * 0.635789) %1 * this.vetorLista.length);
+        int pos = (int) ((chave * 0.635789) % 1 * this.vetorLista.length);
 
         return pos;
     }
@@ -48,13 +48,14 @@ public class l_hashTable {
                     novo = rehash(n.getInfo().getChassi(), n.getInfo(), novo);
                 }
         }
-        //System.out.println("Resize realizado, vetor aumentado de " + vetorLista.length + " para " + novo.length);
-        //System.out.println(realocados + " carros realocados.");
+        // System.out.println("Resize realizado, vetor aumentado de " +
+        // vetorLista.length + " para " + novo.length);
+        // System.out.println(realocados + " carros realocados.");
         this.vetorLista = novo;
     }
 
     private LDE[] rehash(int chave, Veiculo carro, LDE[] vetor) {
-        int pos = (int) ((chave * 0.635789) %1 * vetor.length);
+        int pos = (int) ((chave * 0.635789) % 1 * vetor.length);
 
         if (vetor[pos] == null) {
             vetor[pos] = new LDE();
@@ -90,35 +91,47 @@ public class l_hashTable {
 
     }
 
-    public void removeChassi() {
-        for(int i = 0; i<vetorLista.length; i++){
+    public void getAll() {
+        for (int i = 0; i < vetorLista.length; i++) {
             if (vetorLista[i] != null) {
                 Noh p = vetorLista[i].getInicio();
-                    while (p != null) {
-                        if(p.getInfo().getChassi() <= 202050000) //busca
-                        if(vetorLista[i].remove(p.getInfo())){
-                        }
-                        p = p.getProx();
-                    }
+                while (p != null) {
+                    System.out.println("Veiculo de chassi " + p.getInfo().getChassi() + " e marca " + p.getInfo().getMarca());
+                    p = p.getProx();
                 }
             }
-        
+        }
     }
 
-    public int buscaFord(){
+    public void removeChassi() {
+        for (int i = 0; i < vetorLista.length; i++) {
+            if (vetorLista[i] != null) {
+                Noh p = vetorLista[i].getInicio();
+                while (p != null) {
+                    if (p.getInfo().getChassi() <= 202050000) // busca
+                        if (vetorLista[i].remove(p.getInfo())) {
+                        }
+                    p = p.getProx();
+                }
+            }
+        }
+
+    }
+
+    public int buscaFord() {
         LDE[] veiculos_lista = this.vetorLista;
         int f = 0;
-        for(int i = 0; i<veiculos_lista.length; i++){
+        for (int i = 0; i < veiculos_lista.length; i++) {
             if (veiculos_lista[i] != null) {
                 Noh p = veiculos_lista[i].getInicio();
-                while (p != null) { //busca
-                    if (p.getInfo().isMarcaFord()){
+                while (p != null) { // busca
+                    if (p.getInfo().isMarcaFord()) {
                         f++;
                     }
                     p = p.getProx();
                 }
             }
-            }
-            return f;
         }
+        return f;
+    }
 }
