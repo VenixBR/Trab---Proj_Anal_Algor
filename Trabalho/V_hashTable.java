@@ -105,14 +105,14 @@ public class V_hashTable {
 
 //--------------------------------------------------------------------------
 
-    //Conta quantos elementos são da Ford com uma busca
+    //Printa todos os carros da marca Ford
     public int buscaFord(){
-        int numFord = 0;
+        int num_ford = 0;
         for(int i=0; i<this.vetor.length; i++){
             if(this.vetor[i]!= null && this.vetor[i].getMarca() == "Ford")
-                numFord++;
+                num_ford++;
         }
-        return numFord;
+        return num_ford;
     }
 
     //Remove todos os elementos com o chassi <=202050000
