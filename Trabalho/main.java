@@ -92,9 +92,9 @@ public class main{
         time_fim = System.nanoTime();
         tp = time_fim - time_ini;
 
-        //PRINTAR TODOS OS VEÍCULOS DA FORD
+        //CONTAR TODOS OS VEÍCULOS DA FORD
         time_ini = System.nanoTime();
-        tabela.buscaFord();
+        System.out.println(tabela.buscaFord());
         time_fim = System.nanoTime();
         tford = time_fim - time_ini;
 
@@ -157,17 +157,17 @@ public class main{
 
 
         gravarTempos.printf("-------------------------------\n");
-        gravarTempos.printf("VEÍCULOS     | TEMPO (ns)      \n");
+        gravarTempos.printf("  VEÍCULOS   |   TEMPO (ns)    \n");
         gravarTempos.printf("-------------------------------\n");
-               gravarTempos.printf("    10       | " + t10 +      "\n");
-               gravarTempos.printf("    100      | " + t100 +     "\n");
-               gravarTempos.printf("   1.000     | " + t1k +      "\n");
-               gravarTempos.printf("  100.000    | " + t100k +    "\n");
-               gravarTempos.printf(" 1.000.000   | " + t1mi +     "\n");
+        gravarTempos.printf("    10       | " + t10 +      "\n");
+        gravarTempos.printf("    100      | " + t100 +     "\n");
+        gravarTempos.printf("   1.000     | " + t1k +      "\n");
+        gravarTempos.printf("  100.000    | " + t100k +    "\n");
+        gravarTempos.printf(" 1.000.000   | " + t1mi +     "\n");
         gravarTempos.printf("-------------------------------\n\n\n");
-        gravarTempos.printf("TEMPO PARA IMPRESSÃO:      " + tp + "\n");
-        gravarTempos.printf("TEMPO PARA REMOÇÃO:        " + tr + "\n");
-        gravarTempos.printf("TEMPO PARA MOSTRAR FORD:   " + tford + "\n");
+        gravarTempos.printf("TEMPO PARA IMPRESSÃO:    " + tp + " ns\n");
+        gravarTempos.printf("TEMPO PARA REMOÇÃO:      " + tr + " ns\n");
+        gravarTempos.printf("TEMPO PARA MOSTRAR FORD: " + tford + " ns\n");
         
         
 
