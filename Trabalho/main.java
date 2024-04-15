@@ -20,15 +20,15 @@ public class main{
 
 
         //Arquivo para salvar todos os elementos da lista
-        FileWriter table = new FileWriter("c:\\Trabalho\\Tabelas\\tabela.txt");
+        FileWriter table = new FileWriter("/home/pedropotter/Documents/PAA/testes pedro/Testes Vetor/10Veiculos/elementos4.txt");
         PrintWriter gravarTable = new PrintWriter(table);    
 
         //Arquivo para salvar todos os elementos da lista após a remoção
-        FileWriter table_m = new FileWriter("c:\\Trabalho\\Tabelas\\tabela--.txt");
+        FileWriter table_m = new FileWriter("/home/pedropotter/Documents/PAA/testes pedro/Testes Vetor/10Veiculos/remocao4.txt");
         PrintWriter gravarTable_m = new PrintWriter(table_m);    
 
         //Arquivo para salvar os tempos de execução
-        FileWriter tempos = new FileWriter("c:\\Trabalho\\Tempos\\tempos.txt");
+        FileWriter tempos = new FileWriter("/home/pedropotter/Documents/PAA/testes pedro/Testes Vetor/10Veiculos/tempos4.txt");
         PrintWriter gravarTempos = new PrintWriter(tempos);
 
         //Variáveis para salvar os tempos
@@ -37,7 +37,7 @@ public class main{
         long t10, t100, t1k,t100k, t1mi, tp, tford, tr;
 
         //Criação da tabela
-        V_hashTable tabela = new V_hashTable();
+        V_hashTable tabela = new V_hashTable(10);
       
         //INSERÇÃO DE 10
         time_ini = System.nanoTime();
@@ -48,7 +48,7 @@ public class main{
         time_fim = System.nanoTime();
         t10 = time_fim - time_ini;
 
-        //INSERÇÃO DE 100
+        // INSERÇÃO DE 100
         for(int i=10;i<100;i++){
             Veiculo x = new Veiculo();
             tabela.put(x.getChassi(),x);
@@ -56,7 +56,7 @@ public class main{
         time_fim = System.nanoTime();
         t100 = time_fim - time_ini;
         
-        //INSERÇÃO DE 1.000
+        // INSERÇÃO DE 1.000
         for(int i=100;i<1000;i++){
             Veiculo x = new Veiculo();
             tabela.put(x.getChassi(),x);
