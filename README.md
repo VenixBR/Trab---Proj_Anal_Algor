@@ -9,3 +9,7 @@ Integrantes:
 - Frederico Sicorra
 - Pedro Augusto Pötter
 - Vinícius Schultz
+
+# Links
+
+Tabela de dados: https://docs.google.com/spreadsheets/d/1LI2IkVhO6Ecq2_AQ1fdF68I5OIhDjGV15LySyP2Rj8Y/edit?usp=sharing
