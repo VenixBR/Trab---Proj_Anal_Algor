@@ -1,0 +1,30 @@
+TESTE 01
+
+Tamanho:20   Elementos:10
+
+Vetor[0]  Hash: 19  Veiculo chassi: 202016819 marca: Mazda
+Vetor[1]  Hash: 19  Veiculo chassi: 202039519 marca: Lexus
+Vetor[2]
+Vetor[3]
+Vetor[4]
+Vetor[5]  Hash: 5  Veiculo chassi: 202032825 marca: Renault
+Vetor[6]  Hash: 6  Veiculo chassi: 202086986 marca: Mazda
+Vetor[7]  Hash: 6  Veiculo chassi: 202096746 marca: Ford
+Vetor[8]  Hash: 8  Veiculo chassi: 202085668 marca: Pegout
+Vetor[9]  Hash: 9  Veiculo chassi: 202036169 marca: Chevrolet
+Vetor[10]
+Vetor[11]
+Vetor[12]  Hash: 12  Veiculo chassi: 202088992 marca: Renault
+Vetor[13]
+Vetor[14]  Hash: 14  Veiculo chassi: 202014014 marca: Toyota
+Vetor[15]
+Vetor[16]
+Vetor[17]
+Vetor[18]
+Vetor[19]  Hash: 19  Veiculo chassi: 202061419 marca: Ford
+
+
+Espaços Vazios: 10
+
+
+Espaços Vazios: 15

@@ -1,0 +1,4 @@
+inserção 10 = 0,00175 segundos
+mostrar todos 10 = 0,0793 segundos
+achar ford 10 = 0,0001744 segundos
+remover 10 = 0,0000433 segundos

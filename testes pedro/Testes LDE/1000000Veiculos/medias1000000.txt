@@ -1,0 +1,4 @@
+Inserção 1000000 = 1,0315 segundos
+Mostrar todos 1000000 = 4,9327 segundos
+Achar ford 1000000 = 0,06726 segundos
+Remover 1000000 = 0,06732 segundos

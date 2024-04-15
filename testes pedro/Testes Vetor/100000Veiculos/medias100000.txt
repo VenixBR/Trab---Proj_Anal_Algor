@@ -1,0 +1,4 @@
+inserção 100000 = 2,001 seg
+mostrar todos 100000 = 3,042 seg
+achar ford 100000 = 0,0466 seg
+remvoer 100000 = 0,02975 seg

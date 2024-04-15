@@ -1,0 +1,4 @@
+inserção 100 = 0,00322 seg
+mostrar todos 100 = 0,0908 seg
+achar ford 100 = 0,000179 seg
+remover 100 = 0,000115 seg 

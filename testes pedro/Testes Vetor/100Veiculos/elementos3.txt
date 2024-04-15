@@ -1,0 +1,170 @@
+TESTE 01
+
+Tamanho:160   Elementos:100
+
+Vetor[0]  Hash: 0  Veiculo chassi: 202059840 marca: Lexus
+Vetor[1]  Hash: 0  Veiculo chassi: 202093760 marca: Lexus
+Vetor[2]  Hash: 2  Veiculo chassi: 202096002 marca: Toyota
+Vetor[3]  Hash: 151  Veiculo chassi: 202053271 marca: Ford
+Vetor[4]  Hash: 4  Veiculo chassi: 202001764 marca: Lexus
+Vetor[5]  Hash: 5  Veiculo chassi: 202064805 marca: Renault
+Vetor[6]  Hash: 5  Veiculo chassi: 202059685 marca: Ford
+Vetor[7]  Hash: 5  Veiculo chassi: 202084325 marca: Lexus
+Vetor[8]  Hash: 8  Veiculo chassi: 202007688 marca: Ford
+Vetor[9]  Hash: 7  Veiculo chassi: 202019687 marca: Pegout
+Vetor[10]  Hash: 4  Veiculo chassi: 202083844 marca: Renault
+Vetor[11]  Hash: 11  Veiculo chassi: 202072971 marca: Lexus
+Vetor[12]
+Vetor[13]
+Vetor[14]  Hash: 14  Veiculo chassi: 202011214 marca: Mazda
+Vetor[15]
+Vetor[16]
+Vetor[17]
+Vetor[18]
+Vetor[19]
+Vetor[20]
+Vetor[21]  Hash: 21  Veiculo chassi: 202071381 marca: Ford
+Vetor[22]  Hash: 21  Veiculo chassi: 202001941 marca: Lexus
+Vetor[23]
+Vetor[24]
+Vetor[25]
+Vetor[26]
+Vetor[27]  Hash: 27  Veiculo chassi: 202014587 marca: Pegout
+Vetor[28]
+Vetor[29]
+Vetor[30]
+Vetor[31]
+Vetor[32]
+Vetor[33]  Hash: 33  Veiculo chassi: 202024993 marca: Chevrolet
+Vetor[34]
+Vetor[35]
+Vetor[36]
+Vetor[37]
+Vetor[38]  Hash: 38  Veiculo chassi: 202036358 marca: Chevrolet
+Vetor[39]  Hash: 38  Veiculo chassi: 202081318 marca: Pegout
+Vetor[40]
+Vetor[41]
+Vetor[42]  Hash: 42  Veiculo chassi: 202087882 marca: Lexus
+Vetor[43]  Hash: 43  Veiculo chassi: 202021643 marca: Chevrolet
+Vetor[44]  Hash: 44  Veiculo chassi: 202072364 marca: Pegout
+Vetor[45]  Hash: 42  Veiculo chassi: 202048682 marca: Ford
+Vetor[46]  Hash: 46  Veiculo chassi: 202046286 marca: Chevrolet
+Vetor[47]  Hash: 47  Veiculo chassi: 202060207 marca: Lexus
+Vetor[48]  Hash: 48  Veiculo chassi: 202085488 marca: Toyota
+Vetor[49]  Hash: 47  Veiculo chassi: 202042447 marca: Toyota
+Vetor[50]
+Vetor[51]  Hash: 51  Veiculo chassi: 202083571 marca: Pegout
+Vetor[52]  Hash: 52  Veiculo chassi: 202036052 marca: Mazda
+Vetor[53]  Hash: 52  Veiculo chassi: 202021012 marca: Renault
+Vetor[54]  Hash: 52  Veiculo chassi: 202073012 marca: Toyota
+Vetor[55]  Hash: 52  Veiculo chassi: 202096692 marca: Ford
+Vetor[56]  Hash: 52  Veiculo chassi: 202077652 marca: Toyota
+Vetor[57]  Hash: 55  Veiculo chassi: 202026135 marca: Renault
+Vetor[58]  Hash: 52  Veiculo chassi: 202081492 marca: Lexus
+Vetor[59]  Hash: 59  Veiculo chassi: 202006139 marca: Toyota
+Vetor[60]
+Vetor[61]  Hash: 61  Veiculo chassi: 202000061 marca: Ford
+Vetor[62]
+Vetor[63]  Hash: 63  Veiculo chassi: 202032703 marca: Mazda
+Vetor[64]  Hash: 64  Veiculo chassi: 202009984 marca: Renault
+Vetor[65]  Hash: 65  Veiculo chassi: 202012225 marca: Renault
+Vetor[66]  Hash: 66  Veiculo chassi: 202092386 marca: Chevrolet
+Vetor[67]  Hash: 66  Veiculo chassi: 202034306 marca: Ford
+Vetor[68]  Hash: 68  Veiculo chassi: 202020068 marca: Mazda
+Vetor[69]
+Vetor[70]
+Vetor[71]
+Vetor[72]  Hash: 72  Veiculo chassi: 202066312 marca: Mazda
+Vetor[73]  Hash: 72  Veiculo chassi: 202033352 marca: Renault
+Vetor[74]  Hash: 74  Veiculo chassi: 202084554 marca: Mazda
+Vetor[75]
+Vetor[76]  Hash: 76  Veiculo chassi: 202059916 marca: Toyota
+Vetor[77]  Hash: 76  Veiculo chassi: 202002636 marca: Pegout
+Vetor[78]  Hash: 77  Veiculo chassi: 202092717 marca: Renault
+Vetor[79]  Hash: 78  Veiculo chassi: 202062318 marca: Pegout
+Vetor[80]
+Vetor[81]  Hash: 81  Veiculo chassi: 202087121 marca: Pegout
+Vetor[82]  Hash: 82  Veiculo chassi: 202065202 marca: Mazda
+Vetor[83]  Hash: 83  Veiculo chassi: 202073203 marca: Mazda
+Vetor[84]  Hash: 84  Veiculo chassi: 202006804 marca: Ford
+Vetor[85]  Hash: 83  Veiculo chassi: 202078483 marca: Pegout
+Vetor[86]  Hash: 86  Veiculo chassi: 202026966 marca: Mazda
+Vetor[87]  Hash: 83  Veiculo chassi: 202082323 marca: Chevrolet
+Vetor[88]  Hash: 88  Veiculo chassi: 202019448 marca: Ford
+Vetor[89]  Hash: 88  Veiculo chassi: 202080408 marca: Ford
+Vetor[90]  Hash: 90  Veiculo chassi: 202040090 marca: Mazda
+Vetor[91]
+Vetor[92]
+Vetor[93]  Hash: 93  Veiculo chassi: 202062013 marca: Chevrolet
+Vetor[94]
+Vetor[95]  Hash: 95  Veiculo chassi: 202088415 marca: Mazda
+Vetor[96]
+Vetor[97]  Hash: 97  Veiculo chassi: 202025057 marca: Chevrolet
+Vetor[98]
+Vetor[99]  Hash: 99  Veiculo chassi: 202029859 marca: Chevrolet
+Vetor[100]  Hash: 100  Veiculo chassi: 202064740 marca: Chevrolet
+Vetor[101]  Hash: 101  Veiculo chassi: 202006021 marca: Toyota
+Vetor[102]
+Vetor[103]
+Vetor[104]
+Vetor[105]  Hash: 105  Veiculo chassi: 202098825 marca: Ford
+Vetor[106]
+Vetor[107]
+Vetor[108]  Hash: 108  Veiculo chassi: 202026188 marca: Renault
+Vetor[109]
+Vetor[110]  Hash: 110  Veiculo chassi: 202020430 marca: Toyota
+Vetor[111]
+Vetor[112]  Hash: 112  Veiculo chassi: 202023472 marca: Chevrolet
+Vetor[113]
+Vetor[114]  Hash: 114  Veiculo chassi: 202053234 marca: Chevrolet
+Vetor[115]
+Vetor[116]  Hash: 116  Veiculo chassi: 202098356 marca: Mazda
+Vetor[117]  Hash: 117  Veiculo chassi: 202037397 marca: Chevrolet
+Vetor[118]  Hash: 118  Veiculo chassi: 202018518 marca: Ford
+Vetor[119]  Hash: 119  Veiculo chassi: 202037719 marca: Mazda
+Vetor[120]  Hash: 118  Veiculo chassi: 202053558 marca: Renault
+Vetor[121]  Hash: 121  Veiculo chassi: 202003481 marca: Ford
+Vetor[122]  Hash: 121  Veiculo chassi: 202002201 marca: Ford
+Vetor[123]  Hash: 120  Veiculo chassi: 202018840 marca: Pegout
+Vetor[124]  Hash: 121  Veiculo chassi: 202025881 marca: Toyota
+Vetor[125]  Hash: 120  Veiculo chassi: 202063160 marca: Ford
+Vetor[126]  Hash: 122  Veiculo chassi: 202020602 marca: Mazda
+Vetor[127]
+Vetor[128]
+Vetor[129]  Hash: 129  Veiculo chassi: 202001249 marca: Lexus
+Vetor[130]
+Vetor[131]  Hash: 131  Veiculo chassi: 202099811 marca: Chevrolet
+Vetor[132]
+Vetor[133]  Hash: 133  Veiculo chassi: 202079173 marca: Ford
+Vetor[134]  Hash: 133  Veiculo chassi: 202090693 marca: Mazda
+Vetor[135]  Hash: 133  Veiculo chassi: 202090053 marca: Mazda
+Vetor[136]  Hash: 136  Veiculo chassi: 202012616 marca: Renault
+Vetor[137]
+Vetor[138]
+Vetor[139]  Hash: 139  Veiculo chassi: 202084779 marca: Pegout
+Vetor[140]  Hash: 140  Veiculo chassi: 202071660 marca: Toyota
+Vetor[141]
+Vetor[142]
+Vetor[143]
+Vetor[144]
+Vetor[145]
+Vetor[146]
+Vetor[147]
+Vetor[148]
+Vetor[149]
+Vetor[150]  Hash: 150  Veiculo chassi: 202050550 marca: Ford
+Vetor[151]  Hash: 151  Veiculo chassi: 202053751 marca: Toyota
+Vetor[152]  Hash: 152  Veiculo chassi: 202008152 marca: Chevrolet
+Vetor[153]  Hash: 150  Veiculo chassi: 202071190 marca: Mazda
+Vetor[154]  Hash: 151  Veiculo chassi: 202022711 marca: Mazda
+Vetor[155]  Hash: 155  Veiculo chassi: 202038875 marca: Chevrolet
+Vetor[156]  Hash: 156  Veiculo chassi: 202006556 marca: Chevrolet
+Vetor[157]  Hash: 157  Veiculo chassi: 202024957 marca: Lexus
+Vetor[158]  Hash: 150  Veiculo chassi: 202005910 marca: Mazda
+Vetor[159]  Hash: 158  Veiculo chassi: 202084798 marca: Toyota
+
+
+Espaços Vazios: 60
+
+
+Espaços Vazios: 110

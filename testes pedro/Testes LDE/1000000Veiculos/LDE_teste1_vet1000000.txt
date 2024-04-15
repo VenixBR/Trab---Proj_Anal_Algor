@@ -1,0 +1,5 @@
+O tempo foi de 102898629 ns para inserir todos os veiculos
+O tempo foi de 475488393 ns para mostrar todos os veiculos da tabela
+Existem 14048 veiculos da Ford Cadastrados
+O tempo foi de 8529837 ns para achar todos os veiculos da Ford
+O tempo foi de 7120864 ns para remover os veiculos

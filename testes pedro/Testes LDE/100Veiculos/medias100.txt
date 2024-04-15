@@ -1,0 +1,4 @@
+Inserção 100 = 0,00428 segundos
+Mostrar todos 100 = 0,06466 segundos
+Achar ford 100 = 0,01502 segundos
+Remover 100 = 0,0001648 segundos

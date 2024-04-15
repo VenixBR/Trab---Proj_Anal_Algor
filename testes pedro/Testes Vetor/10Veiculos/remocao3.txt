@@ -1,0 +1,24 @@
+TESTE 01
+
+Tamanho:20   Elementos:5
+
+Vetor[0]  Hash: 19  Veiculo chassi: 202077919 marca: Renault
+Vetor[1]
+Vetor[2]
+Vetor[3]  Hash: 3  Veiculo chassi: 202061043 marca: Chevrolet
+Vetor[4]
+Vetor[5]
+Vetor[6]
+Vetor[7]  Hash: 7  Veiculo chassi: 202071207 marca: Chevrolet
+Vetor[8]
+Vetor[9]  Hash: 9  Veiculo chassi: 202065169 marca: Ford
+Vetor[10]
+Vetor[11]
+Vetor[12]
+Vetor[13]
+Vetor[14]
+Vetor[15]
+Vetor[16]
+Vetor[17]  Hash: 17  Veiculo chassi: 202096597 marca: Ford
+Vetor[18]
+Vetor[19]

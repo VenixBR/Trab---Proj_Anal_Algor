@@ -1,0 +1,5 @@
+O tempo foi de 281937 ns para inserir todos os veiculos = 0,00281937 segundos
+O tempo foi de 4319917 ns para mostrar todos os veiculos da tabela = 0,04319917 segundos
+Existem 2 veiculos da Ford Cadastrados
+O tempo foi de 1312658 ns para achar todos os veiculos da Ford = 0,01312658 segundos
+O tempo foi de 6394 ns para remover os veiculos = 0,00006394 segundos

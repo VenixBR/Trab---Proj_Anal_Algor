@@ -1,0 +1,11 @@
+-------------------------------
+  VEÍCULOS   |   TEMPO (ns)    
+-------------------------------
+    10       | 174668
+    100      | 390947
+-------------------------------
+
+
+TEMPO PARA IMPRESSÃO:    9216375 ns
+TEMPO PARA REMOÇÃO:      11549 ns
+TEMPO PARA MOSTRAR FORD: 18441 ns
